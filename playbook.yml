@@ -1,5 +1,6 @@
-- name: install nginx
+-
+  name: test connectivity
   hosts: all
-  become: yes
-  roles:
-    - nginx
+  tasks:
+    - name: ping test
+      ping:
