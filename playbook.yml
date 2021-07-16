@@ -18,7 +18,6 @@
       
 
   - name: Start NGiNX
-    update_cache: true
     service:
       name: nginx
       state: started
