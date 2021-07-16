@@ -3,6 +3,7 @@
 - name: Install nginx
   hosts: all
   become: true
+  update_cache: true
 
   tasks:
   - name: Add epel-release repo
@@ -14,6 +15,7 @@
     yum:
       name: nginx
       state: present
+      
 
   - name: Start NGiNX
     service:
